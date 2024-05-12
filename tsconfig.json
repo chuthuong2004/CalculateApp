@@ -1,0 +1,42 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "@/acl/*": ["./acl/*"],
+      "@/acl": ["./acl/index"],
+
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@config/*": ["./config/*"],
+      "@config": ["./config/index"],
+
+      "@navigation/*": ["./navigation/*"],
+      "@navigation": ["./navigation/index"],
+
+      "@locales/*": ["./locales/*"],
+
+      "@/store/*": ["./store/*"],
+      "@/store": ["./store/index"],
+
+      "@screens/*": ["./screens/*"],
+
+      "@services/*": ["./services/*"],
+      "@services": ["./services/index"],
+
+      "@utils/*": ["./utils/*"],
+      "@utils": ["./utils/index"],
+
+      "@styles/*": ["./styles/*"],
+      "@styles": ["./styles/index"],
+
+      "@hooks/*": ["./hooks/*"],
+      "@hooks": ["./hooks/index"],
+
+      "@/types/*": ["./types/*"],
+      "@/types": ["./types/index"]
+    },
+    "moduleResolution": "node"
+  }
+}

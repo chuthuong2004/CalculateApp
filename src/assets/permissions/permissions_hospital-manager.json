@@ -1,0 +1,371 @@
+[
+  {
+    "_id": "ReadUser",
+    "name": "read User",
+    "can": true,
+    "action": "read",
+    "subject": "User",
+    "conditions": {
+      "action": "reade-user",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "CreateUser",
+    "name": "create User",
+    "can": true,
+    "action": "create",
+    "subject": "User",
+    "conditions": {
+      "action": "create-user",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "UpdateUser",
+    "name": "update User",
+    "can": true,
+    "action": "update",
+    "subject": "User",
+    "conditions": {
+      "action": "update-user",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "DeleteUser",
+    "name": "delete User",
+    "can": true,
+    "action": "delete",
+    "subject": "User",
+    "conditions": {
+      "action": "delete-user",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "BlockUser",
+    "name": "block User",
+    "can": true,
+    "action": "update",
+    "subject": "User",
+    "conditions": {
+      "action": {
+        "$in": [
+          "block-user",
+          "unlock-user"
+        ]
+      },
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "ReadSub",
+    "name": "read Sub",
+    "can": true,
+    "action": "delete",
+    "subject": "Hospital",
+    "conditions": {
+      "action": "read-sub",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "CreateSub",
+    "name": "create Sub",
+    "can": true,
+    "action": "create",
+    "subject": "Hospital",
+    "conditions": {
+      "action": "create-sub",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "UpdateSub",
+    "name": "update Sub",
+    "can": true,
+    "action": "delete",
+    "subject": "Hospital",
+    "conditions": {
+      "action": "update-sub",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "DeleteSub",
+    "name": "delete Sub",
+    "can": true,
+    "action": "delete",
+    "subject": "Hospital",
+    "conditions": {
+      "action": "delete-sub",
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "BlockSub",
+    "name": "block Sub",
+    "can": true,
+    "action": "update",
+    "subject": "Hospital",
+    "conditions": {
+      "action": {
+        "$in": [
+          "block-sub",
+          "unlock-sub"
+        ]
+      },
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "ReadRole",
+    "name": "read Role",
+    "can": true,
+    "action": "read",
+    "subject": [
+      "Role",
+      "Permission"
+    ],
+    "conditions": {
+      "name": {
+        "$nin": [
+          "Root",
+          "BasicHospital"
+        ]
+      },
+      "permissions": {
+        "$ne": "Root"
+      },
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "CreateRole",
+    "name": "create Role",
+    "can": true,
+    "action": "create",
+    "subject": [
+      "Role",
+      "Permission"
+    ],
+    "conditions": {
+      "name": {
+        "$nin": [
+          "Root",
+          "BasicHospital"
+        ]
+      },
+      "permissions": {
+        "$ne": "Root"
+      },
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "UpdateRole",
+    "name": "update Role",
+    "can": true,
+    "action": "update",
+    "subject": [
+      "Role",
+      "Permission"
+    ],
+    "conditions": {
+      "name": {
+        "$nin": [
+          "Root",
+          "BasicHospital"
+        ]
+      },
+      "permissions": {
+        "$ne": "Root"
+      },
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "DeleteRole",
+    "name": "delete Role",
+    "can": true,
+    "action": "delete",
+    "subject": [
+      "Role",
+      "Permission"
+    ],
+    "conditions": {
+      "name": {
+        "$nin": [
+          "Root",
+          "BasicHospital"
+        ]
+      },
+      "permissions": {
+        "$ne": "Root"
+      },
+      "belong": "Hospital"
+    }
+  },
+  {
+    "_id": "ReadCategory",
+    "name": "read Category",
+    "can": true,
+    "action": "read",
+    "subject": "Category"
+  },
+  {
+    "_id": "CreateCategory",
+    "name": "create Category",
+    "can": true,
+    "action": "create",
+    "subject": "Category"
+  },
+  {
+    "_id": "UpdateCategory",
+    "name": "update Category",
+    "can": true,
+    "action": "update",
+    "subject": "Category"
+  },
+  {
+    "_id": "DeleteCategory",
+    "name": "delete Category",
+    "can": true,
+    "action": "delete",
+    "subject": "Category"
+  },
+  {
+    "_id": "CreateDiscount",
+    "name": "create Discount",
+    "can": true,
+    "action": "create",
+    "subject": "Discount"
+  },
+  {
+    "_id": "UpdateDiscount",
+    "name": "update Discount",
+    "can": true,
+    "action": "update",
+    "subject": "Discount"
+  },
+  {
+    "_id": "DeleteDiscount",
+    "name": "delete Discount",
+    "can": true,
+    "action": "delete",
+    "subject": "Discount"
+  },
+  {
+    "_id": "ReadPaymentMethod",
+    "name": "read PaymentMethod",
+    "can": true,
+    "action": "read",
+    "subject": "PaymentMethod"
+  },
+  {
+    "_id": "CreatePaymentMethod",
+    "name": "create PaymentMethod",
+    "can": true,
+    "action": "create",
+    "subject": "PaymentMethod"
+  },
+  {
+    "_id": "UpdatePaymentMethod",
+    "name": "update PaymentMethod",
+    "can": true,
+    "action": "update",
+    "subject": "PaymentMethod"
+  },
+  {
+    "_id": "DeletePaymentMethod",
+    "name": "delete PaymentMethod",
+    "can": true,
+    "action": "delete",
+    "subject": "PaymentMethod"
+  },
+  {
+    "_id": "ReadPayment",
+    "name": "read Payment",
+    "can": true,
+    "action": "read",
+    "subject": "Payment"
+  },
+  {
+    "_id": "CreatePayment",
+    "name": "create Payment",
+    "can": true,
+    "action": "create",
+    "subject": "Payment"
+  },
+  {
+    "_id": "UpdatePayment",
+    "name": "update Payment",
+    "can": true,
+    "action": "update",
+    "subject": "Payment"
+  },
+  {
+    "_id": "DeletePayment",
+    "name": "delete Payment",
+    "can": true,
+    "action": "delete",
+    "subject": "Payment"
+  },
+  {
+    "_id": "ReadMedical",
+    "name": "read Medical",
+    "can": true,
+    "action": "read",
+    "subject": "Medical"
+  },
+  {
+    "_id": "CreateMedical",
+    "name": "create Medical",
+    "can": true,
+    "action": "create",
+    "subject": "Medical"
+  },
+  {
+    "_id": "UpdateMedical",
+    "name": "update Medical",
+    "can": true,
+    "action": "update",
+    "subject": "Medical"
+  },
+  {
+    "_id": "DeleteMedical",
+    "name": "delete Medical",
+    "can": true,
+    "action": "delete",
+    "subject": "Medical"
+  },
+  {
+    "_id": "ReadPrescription",
+    "name": "read Prescription",
+    "can": true,
+    "action": "read",
+    "subject": "Prescription"
+  },
+  {
+    "_id": "CreatePrescription",
+    "name": "create Prescription",
+    "can": true,
+    "action": "create",
+    "subject": "Prescription"
+  },
+  {
+    "_id": "UpdatePrescription",
+    "name": "update Prescription",
+    "can": true,
+    "action": "update",
+    "subject": "Prescription"
+  },
+  {
+    "_id": "DeletePrescription",
+    "name": "delete Prescription",
+    "can": true,
+    "action": "delete",
+    "subject": "Prescription"
+  }
+]
